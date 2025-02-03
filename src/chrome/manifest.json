@@ -1,0 +1,44 @@
+{
+   "icons": {
+      "16": "assets/icons/icon-16x16.png",
+      "48": "assets/icons/icon-48x48.png",
+      "120": "assets/icons/icon-128x128.png"
+   },
+   "action": {
+      "default_icon": {
+         "16": "assets/icons/icon-16x16.png",
+         "48": "assets/icons/icon-48x48.png",
+         "120": "assets/icons/icon-128x128.png"
+      },
+      "default_popup": "html/popup.html"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "js/content.js"
+         ],
+         "matches": [
+            "https://*.youtube.com/*",
+            "https://www.youtube.com/*"
+         ]
+      }
+   ],
+   "description": "A fast, lightweight, and undetectable YouTube Ads Blocker for Chrome.",
+   "host_permissions": [
+      "https://*.youtube.com/*",
+      "https://www.youtube.com/*"
+   ],
+   "manifest_version": 3,
+   "name": "SpeedyForward: YouTube™ Ad Skipper",
+   "permissions": [
+      "scripting",
+      "storage",
+      "debugger",
+      "activeTab"
+   ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}
