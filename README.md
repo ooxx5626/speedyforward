@@ -1,5 +1,7 @@
 # SpeedyForward: YouTube™ Ad Skipper
 
+![Demo](assets/demo.gif)
+
 This extension is designed to monitor advertisements, automatically seek the ads, and skip them. It's important to note that this doesn't classify as traditional ad blocking, as the ad content is technically "loaded".
 
 Nevertheless, the extension's underlying logic enables it to fast-forward through the ad content to its conclusion. The entire process is optimized to occur within an extremely brief timeframe, typically <=100 milliseconds, ensuring a smooth and uninterrupted user experience.
