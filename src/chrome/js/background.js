@@ -1,4 +1,5 @@
 function init() {
+  console.info("Initializing settings...");
   const url = chrome.runtime.getURL("assets/settings.json");
   fetch(url, { method: "GET" })
     .then(function (t) {
@@ -35,7 +36,7 @@ async function simulateClick(tabId, selector) {
   });
 
   if (!position) {
-    console.warn("Element not found");
+    console.warn(`selector: ` + selector + ` not found`);
     return;
   }
 
@@ -108,6 +109,9 @@ async function simulateClick(tabId, selector) {
 async function handleSkipAd(tabId) {
   chrome.storage.local.get(["skipButtonAlt"], async function (t) {
     simulateClick(tabId, t.skipButtonAlt);
+  });
+  chrome.storage.local.get(["skipButton"], async function (t) {
+    simulateClick(tabId, t.skipButton);
   });
 }
 

@@ -25,7 +25,9 @@ taimuRipu = async () => {
               const t = document.querySelector(e);
               t && (t.style.display = "none");
             });
-          const skb = document.querySelector(e.skipButtonAlt);
+          const skb =
+            document.querySelector(e.skipButtonAlt) ||
+            document.querySelector(e.skipButton);
           skb && chrome.runtime.sendMessage({ message: "taimu-ripu-skb" });
         }
       ),
