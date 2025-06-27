@@ -15,6 +15,7 @@ taimuRipu = async () => {
           "skipButtonAlt",
           "surveyButton",
           "staticAds",
+          "errorScreen",
         ],
         function (e) {
           const t = document.querySelector(e.isAd),
@@ -29,6 +30,9 @@ taimuRipu = async () => {
             document.querySelector(e.skipButtonAlt) ||
             document.querySelector(e.skipButton);
           skb && chrome.runtime.sendMessage({ message: "taimu-ripu-skb" });
+          const errorScreen = document.querySelector(e.errorScreen);
+          errorScreen &&
+            chrome.runtime.sendMessage({ message: "taimu-ripu-error-screen" });
         }
       ),
         e();

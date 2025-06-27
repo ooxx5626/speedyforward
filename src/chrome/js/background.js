@@ -155,6 +155,13 @@ function handleAdForward(tabId) {
   });
 }
 
+function handleErrorScreen(tabId) {
+  //reload the page to handle error screen
+  chrome.tabs.reload(tabId, { bypassCache: true }, () => {
+    console.log("Page reloaded to handle error screen");
+  });
+}
+
 // 監聽消息
 chrome.runtime.onMessage.addListener((message, sender) => {
   if (!sender.tab) return;
@@ -167,6 +174,9 @@ chrome.runtime.onMessage.addListener((message, sender) => {
       break;
     case "taimu-ripu-skb":
       handleSkipAd(tabId);
+      break;
+    case "taimu-ripu-error-screen":
+      handleErrorScreen(tabId);
       break;
     case "init-setting":
       init();

@@ -24,5 +24,6 @@
     "previewTextAlt": ".ytp-ad-preview-text-modern",
     "skipButton": ".ytp-skip-ad-button",
     "skipButtonAlt": ".ytp-ad-skip-button-modern",
-    "surveyButton": ".ytp-ad-survey"
+    "surveyButton": ".ytp-ad-survey",
+    "errorScreen":".error-screen"
 }
