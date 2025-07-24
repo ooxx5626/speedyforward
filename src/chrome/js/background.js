@@ -16,6 +16,7 @@ function init() {
         skipButton: t.skipButton,
         skipButtonAlt: t.skipButtonAlt,
         surveyButton: t.surveyButton,
+        errorScreen: t.errorScreen,
       });
     });
 }

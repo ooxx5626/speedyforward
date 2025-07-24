@@ -32,7 +32,10 @@ taimuRipu = async () => {
           skb && chrome.runtime.sendMessage({ message: "taimu-ripu-skb" });
           const errorScreen = document.querySelector(e.errorScreen);
           errorScreen &&
-            chrome.runtime.sendMessage({ message: "taimu-ripu-error-screen" });
+            chrome.runtime.sendMessage({
+              message: "taimu-ripu-error-screen",
+            }) &&
+            errorScreen.remove();
         }
       ),
         e();
