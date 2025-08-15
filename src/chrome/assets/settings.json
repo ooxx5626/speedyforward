@@ -25,5 +25,5 @@
     "skipButton": ".ytp-skip-ad-button",
     "skipButtonAlt": ".ytp-ad-skip-button-modern",
     "surveyButton": ".ytp-ad-survey",
-    "errorScreen":".yt-playability-error-supported-renderers"
+    "errorScreen":"ytd-enforcement-message-view-model"
 }
